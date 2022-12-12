@@ -1,35 +1,16 @@
-/*
-function Animal(ner) {
-    this.name = ner;
-
-};
-Animal.prototype.hoolloh = function () {
-    console.log(this.name + " hoolloloo");
-};
-
-var a1 = new Animal('Ymaa');
-a1.mailah = function () {
-    console.log(this.name + " Maillaa");
+var img = {
+    file: "c:/images/a123.jpg",
+    content: 'muur',
+    zuragTanih: function () {
+        console.log("Ene zurag deer " + this.content + " baigaa n tanigdlaa");
+    }
 }
+img.zuragTanih();
 
-a1.hoolloh();
-a1.mailah();
+var myImg = {
+    file: "c:/images/a541.jpg",
+    content: 'nohoi',
+}
+var mySuperZuragTanihFunction = img.zuragTanih.bind(myImg);
 
-var a2 = new Animal('Uher');
-a2.hoolloh();
-
-var a3 = new Animal('Aduu');
-a3.hoolloh();
-*/
-
-function Animal() {
-    // this.name = ner;
-
-};
-Animal.prototype.hoolloh = function () {
-    console.log(" hoolloloo");
-};
-
-var a1 = new Animal();
-
-a1.hoolloh();
+mySuperZuragTanihFunction();
