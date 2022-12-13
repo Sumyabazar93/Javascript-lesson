@@ -6,7 +6,6 @@
 // }
 // console.log(math.abs(-2250));
 
-var birthYears = [1981, 2005, 1978, 1986, 2010];
 
 // console.log(findOutAges());
 // console.log(ages);
@@ -30,10 +29,17 @@ var birthYears = [1981, 2005, 1978, 1986, 2010];
 //     return isFullAges;
 // }
 
+var birthYears = [1981, 2005, 1950, 1986, 1948];
+
 var ages = processArray(birthYears, findOutAges);
 
 console.log(ages);
 console.log(processArray(ages, isFullAge));
+
+console.log(processArray(ages, function (el) {
+    return el >= 65;
+}));
+
 
 function processArray(myArr, fn) {
     var arr = [];
@@ -46,7 +52,6 @@ function processArray(myArr, fn) {
 function findOutAges(el) {
     return new Date().getFullYear() - el;
 }
-
 function isFullAge(el) {
     return el >= 18;
 }
