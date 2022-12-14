@@ -1,39 +1,22 @@
-// var a = [];
+var uiCrtl = (function () {
+    var x = 100;
 
-// a.push(34);
-// a.push("hello");
-// a.push(function () {
-//     console.log("Sainu massiv dotor");
-
-//     return function () {
-//         console.log('Massiv dotorh funkts dotorh');
-//         return function () {
-//             console.log('Inception!!!');
-//         }
-//     }
-// })
-// console.log(a);
-// console.log(a[2]()()());
-
-function prepare() {
-    var arr = [];
-
-    for (var i = 0; i < 3; i++) {
-        arr.push(
-            (function (j) {
-                return function () {
-                    console.log(j);
-                };
-            })(i)
-        );
+    function add(y) {
+        return x + y;
     }
-    return arr;
-}
 
-var massive = prepare();
+    return {
+        publicAdd: function (a) {
+            a = add(a);
+            console.log("Utga : " + a);
+        }
+    }
+})();
 
-massive[0]();
-massive[1]();
-massive[2]();
+var financecrtl = (function () {
 
-console.log(massive);
+});
+
+var appCrtl = (function (uiCrtl, financecrtl) {
+    uiCrtl.publicAdd(150);
+})(uiCrtl, financecrtl);
