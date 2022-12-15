@@ -1,22 +1,20 @@
-var uiCrtl = (function () {
-    var x = 100;
+// var html = "<p> sainuu</p>";
 
-    function add(y) {
-        return x + y;
-    }
+// html = html.replace(/p/gi, 'strong');
 
-    return {
-        publicAdd: function (a) {
-            a = add(a);
-            console.log("Utga : " + a);
-        }
-    }
-})();
+// console.log(html);
 
-var financecrtl = (function () {
 
-});
+// incDiv.insertAdjacentHTML()
 
-var appCrtl = (function (uiCrtl, financecrtl) {
-    uiCrtl.publicAdd(150);
-})(uiCrtl, financecrtl);
+var incDiv = document.querySelector('.income');
+
+incDiv.insertAdjacentHTML('beforeend', 'Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
+incDiv.insertAdjacentHTML('beforeend', '<br>Tsalin : 25000000');
